@@ -1,19 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import ImagePickerExample from './components/VideoPick';
+
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
+import Home from './Screens/Home';
+import Video from './Screens/Video';
+import Audio from './Screens/Audio';
 
 export default function App() {
   return (
-    <View style={styles.container}><Text>hi<ImagePickerExample/></Text><StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Audio" component={Audio} />
+        <Stack.Screen name="Video" component={Video} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
