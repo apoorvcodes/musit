@@ -1,9 +1,13 @@
+import React from 'react';
 import { View, Text } from 'react-native';
-import Hero from '../components/Hero';
-export default function Home({ navigation }: any) {
+import tw from 'twrnc';
+
+const Hello = () => {
   return (
-    <View>
-      <Hero />
+    <View style={tw`flex justify-center items-center bg-blue-700`}>
+      <Text style={tw`text-5xl`}>Hi</Text>
     </View>
   );
-}
+};
+
+export default Hello;
