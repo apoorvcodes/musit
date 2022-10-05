@@ -1,11 +1,11 @@
-
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-const Stack = createNativeStackNavigator();
-import Home from './Screens/Home';
-import Video from './Screens/Video';
-import Audio from './Screens/Audio';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Stack = createBottomTabNavigator();
+import Home from './screens/Home';
+import Video from './screens/VideoStack';
+import Audio from './screens/Audio';
 
 export default function App() {
   return (
@@ -18,5 +18,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-

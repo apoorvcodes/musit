@@ -1,4 +1,4 @@
 export interface video {
-    uri: string,
-    type: string
+  uri: string;
+  type: string;
 }
